@@ -12,7 +12,10 @@ class TopImage extends StatelessWidget {
       height: 165.h,
       decoration: const BoxDecoration(
         image: DecorationImage(
-          image: AssetImage(FattoAppImages.mainImage),
+          image: AssetImage(
+            FattoAppImages.mainImage,
+          ),
+          fit: BoxFit.cover,
         ),
       ),
     );
