@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ui_task/app/model/product_model.dart';
 import 'package:ui_task/views/widgets/main_container.dart';
 
@@ -20,9 +21,9 @@ class ScrollableRow extends StatelessWidget {
         children: productList
             .map(
               (product) => Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 16,
-                ).copyWith(right: 4),
+                padding: EdgeInsets.only(
+                  left: 9.w,
+                ).copyWith(right: 13),
                 child: MainContainer(
                   product: product,
                   hasDiscount: hasDiscount ?? false,

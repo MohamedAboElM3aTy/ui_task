@@ -12,9 +12,11 @@ class BuildHeaderRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(
-        horizontal: 16.w,
-        vertical: 16.h,
+      padding: EdgeInsets.only(
+        top: 16.h,
+        bottom: 19.h,
+        left: 16.w,
+        right: 16.w,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -31,13 +33,13 @@ class BuildHeaderRow extends StatelessWidget {
               ),
               const Gap(10),
               const TimerBox(label: '02'),
-              const Gap(10),
+              const Gap(6),
               const TwoColons(),
-              const Gap(10),
+              const Gap(4.38),
               const TimerBox(label: '24'),
-              const Gap(10),
+              const Gap(6),
               const TwoColons(),
-              const Gap(10),
+              const Gap(3.37),
               const TimerBox(label: '09'),
             ],
           ),

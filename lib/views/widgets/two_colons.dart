@@ -17,7 +17,7 @@ class TwoColons extends StatelessWidget {
             backgroundColor: FattoAppColors.mainColor,
           ),
         ),
-        const Gap(3),
+        const Gap(2),
         SizedBox(
           width: 2.63.w,
           height: 2.63.h,

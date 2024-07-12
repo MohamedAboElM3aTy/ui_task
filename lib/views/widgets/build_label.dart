@@ -25,12 +25,17 @@ class BuildLabel extends StatelessWidget {
         ),
         color: (hasDecoratedColor == true) ? FattoAppColors.mainColor : null,
       ),
-      child: Padding(
-        padding: const EdgeInsets.all(3.0),
-        child: SizedBox(
-          width: 59.w,
-          height: 10.h,
-          child: FittedBox(
+      child: SizedBox(
+        width: 59.w,
+        height: 10.h,
+        child: FittedBox(
+          child: Padding(
+            padding: EdgeInsets.only(
+              top: 1.h,
+              bottom: 1.h,
+              left: 10.h,
+              right: 6.w,
+            ),
             child: Text(
               label,
               style: context.textTheme.labelMedium!.copyWith(

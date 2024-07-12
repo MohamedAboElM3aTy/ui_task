@@ -9,60 +9,72 @@ class UpcomingLabels extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(
-        horizontal: 12.w,
-        vertical: 1.h,
-      ),
+    return SizedBox(
+      height: 58.h,
+      width: 90.w,
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          DecoratedBox(
-            decoration: BoxDecoration(
-              border: Border.all(
-                color: FattoAppColors.whiteColor,
-                width: 1,
-              ),
+          Padding(
+            padding: EdgeInsets.only(
+              top: 10.w,
+              bottom: 2.w,
             ),
-            child: Padding(
-              padding: const EdgeInsets.all(3.0),
+            child: DecoratedBox(
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: FattoAppColors.whiteColor,
+                  width: 1,
+                ),
+              ),
               child: SizedBox(
                 width: 59.w,
-                height: 10.h,
+                height: 19.h,
                 child: FittedBox(
-                  child: RichText(
-                    text: TextSpan(
-                      text: 'Extra 37% Off',
-                      style: context.textTheme.labelMedium!.copyWith(
-                        fontSize: 12.sp,
-                        fontWeight: FontWeight.w600,
-                        color: FattoAppColors.whiteColor,
-                      ),
-                      children: [
-                        TextSpan(
-                          text: '\n+ Cashback 15%',
-                          style: context.textTheme.labelMedium!.copyWith(
-                            fontSize: 12.sp,
-                            fontWeight: FontWeight.w400,
-                            color: const Color(0xff292A5A),
-                          ),
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(vertical: 9.h),
+                    child: RichText(
+                      text: TextSpan(
+                        text: 'Extra 37% Off',
+                        style: context.textTheme.labelMedium!.copyWith(
+                          fontSize: 12.sp,
+                          fontWeight: FontWeight.w600,
+                          color: FattoAppColors.whiteColor,
                         ),
-                      ],
+                        children: [
+                          TextSpan(
+                            text: '\n+ Cashback 15%',
+                            style: context.textTheme.labelMedium!.copyWith(
+                              fontSize: 12.sp,
+                              fontWeight: FontWeight.w400,
+                              color: const Color(0xff292A5A),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
               ),
             ),
           ),
-          const BuildLabel(
-            label: '24-26 December',
-            borderColor: FattoAppColors.whiteColor,
-            hasDecoratedColor: false,
+          Padding(
+            padding: EdgeInsets.only(
+              bottom: 2.w,
+            ),
+            child: const BuildLabel(
+              label: '24-26 December',
+              borderColor: FattoAppColors.whiteColor,
+              hasDecoratedColor: false,
+            ),
           ),
-          const BuildLabel(
-            label: 'Remind Me',
-            borderColor: FattoAppColors.mainColor,
-            hasDecoratedColor: true,
+          Padding(
+            padding: EdgeInsets.only(bottom: 3.w),
+            child: const BuildLabel(
+              label: 'Remind Me',
+              borderColor: FattoAppColors.mainColor,
+              hasDecoratedColor: true,
+            ),
           ),
         ],
       ),

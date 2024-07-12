@@ -19,8 +19,8 @@ class MainContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 95.w,
-      height: 130.h,
+      width: 121.w,
+      height: 150.h,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(3.r),
         color: FattoAppColors.whiteColor,
@@ -28,25 +28,22 @@ class MainContainer extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Flexible(
-            flex: 1,
-            child: SizedBox(
-              height: 72.h,
-              child: ClipRRect(
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(3.r),
-                  topRight: Radius.circular(3.r),
-                ),
-                child: Image.asset(
-                  product.imagePath,
-                  fit: BoxFit.fitHeight,
-                ),
+          AspectRatio(
+            aspectRatio: 121.w / 92.h,
+            child: ClipRRect(
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(3.r),
+                topRight: Radius.circular(3.r),
+              ),
+              child: Image.asset(
+                product.imagePath,
+                fit: BoxFit.cover,
               ),
             ),
           ),
           const Gap(8),
           Padding(
-            padding: EdgeInsets.only(left: 5.w, right: 4.w),
+            padding: EdgeInsets.symmetric(horizontal: 5.w).copyWith(right: 7.w),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -58,9 +55,9 @@ class MainContainer extends StatelessWidget {
                     color: const Color(0xff161616),
                   ),
                 ),
-                const Icon(
+                Icon(
                   Icons.favorite_outline,
-                  size: 15,
+                  size: 15.w,
                   color: FattoAppColors.mainColor,
                 ),
               ],
@@ -68,7 +65,7 @@ class MainContainer extends StatelessWidget {
           ),
           const Gap(8),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 8.w),
+            padding: EdgeInsets.symmetric(horizontal: 7.w),
             child: Column(
               children: [
                 Text(
@@ -79,7 +76,7 @@ class MainContainer extends StatelessWidget {
                     color: FattoAppColors.mainColor,
                   ),
                 ),
-                (hasDiscount == true)
+                hasDiscount == true
                     ? Text(
                         product.discountedPrice.toString(),
                         style: context.textTheme.labelSmall!.copyWith(

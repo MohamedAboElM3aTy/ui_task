@@ -14,9 +14,11 @@ class TitleWithSeeAll extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(
-        horizontal: 16.w,
-        vertical: 16.h,
+      padding: EdgeInsets.only(
+        left: 13.w,
+        right: 9.w,
+        top: 24.h,
+        bottom: 19.h,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

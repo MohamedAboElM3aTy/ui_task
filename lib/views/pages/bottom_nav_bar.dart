@@ -43,7 +43,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   List<PersistentBottomNavBarItem> _navBarsItems() {
     return [
       PersistentBottomNavBarItem(
-        icon: const Icon(Icons.house),
+        icon: const Icon(Icons.house_outlined),
         title: ('Shop'),
         activeColorPrimary: FattoAppColors.mainColor,
         inactiveColorPrimary: FattoAppColors.inActiveIconColor,
@@ -80,12 +80,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
       backgroundColor: Colors.white,
       handleAndroidBackButtonPress: true,
       resizeToAvoidBottomInset: true,
-      stateManagement: true, // Default is true.
+      stateManagement: true,
       hideNavigationBarWhenKeyboardShows: true,
-      decoration: NavBarDecoration(
-        borderRadius: BorderRadius.circular(10.0),
-        colorBehindNavBar: Colors.white,
-      ),
       popAllScreensOnTapOfSelectedTab: true,
       popActionScreens: PopActionScreensType.all,
       itemAnimationProperties: const ItemAnimationProperties(
@@ -97,7 +93,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
         curve: Curves.ease,
         duration: Duration(milliseconds: 200),
       ),
-      navBarStyle: NavBarStyle.style3,
+      navBarStyle: NavBarStyle.style6,
     );
   }
 }

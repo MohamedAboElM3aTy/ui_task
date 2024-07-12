@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ui_task/app/constants/fatto_app_images.dart';
+import 'package:ui_task/views/widgets/overlapping_squares.dart';
 
 class GirlsGradientContainer extends StatelessWidget {
   const GirlsGradientContainer({super.key});
@@ -21,7 +22,7 @@ class GirlsGradientContainer extends StatelessWidget {
               gradient: LinearGradient(
                 colors: [
                   Color(0xff292A5A),
-                  Color(0xffff2441),
+                  Color.fromARGB(143, 255, 36, 65),
                 ],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
@@ -30,39 +31,41 @@ class GirlsGradientContainer extends StatelessWidget {
           ),
         ),
         Positioned(
-          top: 6.h,
-          right: 15.w,
-          child: Image.asset(
-            FattoAppImages.starOneImage,
-            width: 10.w,
-            height: 10.h,
+          child: CustomPaint(
+            painter: OverLappingSquaresPainter(),
+            size: Size(72.w, 50.h),
           ),
         ),
         Positioned(
-          bottom: 8.h,
-          right: 13.w,
+          top: 2.h,
+          right: 17.w,
+          child: Image.asset(
+            FattoAppImages.starOneImage,
+            width: 5.w,
+          ),
+        ),
+        Positioned(
+          bottom: 6.h,
+          right: 10.w,
           child: Image.asset(
             FattoAppImages.starTwoImage,
-            width: 8.w,
-            height: 8.h,
+            width: 5.w,
           ),
         ),
         Positioned(
           top: 22.h,
-          left: 15.w,
+          left: 21.w,
           child: Image.asset(
             FattoAppImages.starThreeImage,
-            width: 8.w,
-            height: 8.h,
+            width: 5.w,
           ),
         ),
         Positioned(
-          bottom: 5.h,
-          left: 15.w,
+          bottom: 3.h,
+          left: 10.w,
           child: Image.asset(
             FattoAppImages.starFourImage,
-            width: 8.w,
-            height: 8.h,
+            width: 5.w,
           ),
         ),
         Positioned(
@@ -70,7 +73,8 @@ class GirlsGradientContainer extends StatelessWidget {
           child: Image.asset(
             FattoAppImages.girlImage,
             fit: BoxFit.fill,
-            height: 50.h,
+            height: 54.h,
+            width: 55.w,
           ),
         ),
       ],

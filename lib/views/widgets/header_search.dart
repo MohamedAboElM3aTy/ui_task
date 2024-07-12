@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ui_task/app/constants/fatto_app_colors.dart';
 import 'package:ui_task/app/extensions/context.dart';
 
-class HeaderRow extends StatelessWidget {
-  const HeaderRow({super.key});
+class HeaderSearch extends StatelessWidget {
+  const HeaderSearch({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,6 +15,7 @@ class HeaderRow extends StatelessWidget {
           padding: const EdgeInsets.all(16),
           child: Container(
             width: 284.w,
+            height: 30.h,
             decoration: BoxDecoration(
               color: FattoAppColors.whiteColor,
               borderRadius: BorderRadius.circular(2.r),
@@ -33,15 +34,17 @@ class HeaderRow extends StatelessWidget {
                   color: const Color(0xffc0c0c0),
                 ),
                 border: InputBorder.none,
-                contentPadding: const EdgeInsets.symmetric(vertical: 10),
+                contentPadding: EdgeInsets.symmetric(
+                  vertical: 12.w,
+                ),
               ),
             ),
           ),
         ),
-        const Icon(
+        Icon(
           Icons.camera_alt_rounded,
-          color: Color(0xffC67E54),
-          size: 25,
+          color: const Color(0xffC67E54),
+          size: 30.w,
         ),
       ],
     );
